@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  projects:
+    build:
+      context: .
+      dockerfile: Dockerfile-projects
+    image: 'projects'
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./common:/common:ro
+      - ./projects:/projects
+    entrypoint: /common/entry.sh
