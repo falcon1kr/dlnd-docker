@@ -1,3 +1,3 @@
 #! /bin/bash
 
-jupyter notebook --ip='*' --notebook-dir='/projects' --no-browser
+jupyter notebook --ip='*' --notebook-dir=$PROJECT_PATH --no-browser

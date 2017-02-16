@@ -8,6 +8,8 @@ services:
     image: 'projects'
     ports:
       - "8888:8888"
+    environment:
+      PROJECT_PATH: '/projects'
     volumes:
       - ./common:/common:ro
       - ./projects:/projects
