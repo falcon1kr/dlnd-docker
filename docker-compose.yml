@@ -9,8 +9,9 @@ services:
     ports:
       - "8888:8888"
     environment:
-      PROJECT_PATH: '/projects'
+      PROJECT_PATH: '/src'
     volumes:
       - ./common:/common:ro
-      - ./projects:/projects
+      - ./projects:/src/projects
+      - ./materials:/src/materials
     entrypoint: /common/entry.sh

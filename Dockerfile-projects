@@ -3,6 +3,11 @@ FROM continuumio/anaconda3
 RUN mkdir /common
 VOLUME /common
 
-RUN mkdir /projects
-VOLUME /projects
-WORKDIR /projects
+RUN mkdir /src
+WORKDIR /src
+
+RUN mkdir materials
+RUN mkdir projects
+
+VOLUME /src/materials
+VOLUME /src/projects
